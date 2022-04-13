@@ -1,7 +1,4 @@
-.services-title{
-    text-align: center;
-    color: rgb(0, 102, 255);
-}
+
 .services-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
