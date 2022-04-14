@@ -4,15 +4,18 @@ import { Link } from 'react-router-dom';
 import logo from '../../../images/logo.png';
 
 const Header = () => {
+    const handleLogoJump = () =>{
+        window.scroll(0,0);
+    }
     return (
         <Navbar sticky='top' collapseOnSelect expand="lg" bg="primary" variant="dark">
             <Container>
-                <Navbar.Brand as={Link} to="/"><img height={35} src={logo} alt="" /></Navbar.Brand>
+                <Navbar.Brand onClick={handleLogoJump} as={Link} to="/"><img height={35} src={logo} alt="" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="/services">Services</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                        <Nav.Link href="home#services">Services</Nav.Link>
+                        <Nav.Link href="home#experts">Experts</Nav.Link>
                         <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
